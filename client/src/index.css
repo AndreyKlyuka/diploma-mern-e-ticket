@@ -1,0 +1,355 @@
+@import '~materialize-css/dist/css/materialize.min.css';
+
+/* varialbes */
+
+:root {
+    --orange: #e18a07;
+    --black: #050505;
+    --white: #ffffff;
+    --gray: #c0c0c0;
+}
+
+.orange {
+    background-color: var(--orange) !important;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4em;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navigation-position {
+    height: 4em;
+    background: var(--gray);
+}
+
+.page {
+    background-color: var(--gray);
+}
+
+.progress {
+    height: 3em;
+    background-color: var(--gray);
+}
+
+.indeterminate {
+    background-color: var(--orange) !important;
+}
+html {
+    background-color: var(--gray);
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+header {
+    height: calc(100vh);
+    background: url(https://showbiz.24tv.ua/resources/photos/news/1200x675_DIR/202001/1270674.jpg?202012114737);
+    background-size: cover;
+    background-position: 62% 25%;
+    /* position: relative; */
+    margin-bottom: 4em;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+p {
+    max-width: 35em;
+}
+
+section {
+    padding: 4em 0;
+}
+
+h2 {
+    margin-bottom: 1.5em;
+}
+
+th,
+td {
+    text-align: center;
+    width: 33.33%;
+}
+
+/* some changes in styles  */
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-action_setting {
+    display: flex;
+    justify-content: space-between;
+}
+
+input.input-auth-color {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: none !important;
+    color: #fff !important;
+}
+
+input.input-auth-color + label {
+    color: #fff !important;
+}
+
+input.input-auth-color:focus {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: none !important;
+    color: #fff !important;
+}
+
+input.input-auth-color:focus + label {
+    color: #fff !important;
+}
+
+input.input-color {
+    border-bottom: 1px solid var(--black) !important;
+    box-shadow: none !important;
+    color: var(--black) !important;
+}
+
+input.input-color + label {
+    color: var(--black) !important;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.card-custom {
+    position: relative;
+    left: 0;
+    bottom: 50em;
+    box-shadow: 10px 10px 25px 10px rgb(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    transition: cubic-bezier(0.56, 0.45, 0.07, 1.24) 0.7s;
+    backdrop-filter: blur(10px);
+    animation: changeOpacityReverse 0.7s;
+    z-index: -3;
+}
+
+.card-custom_change {
+    transform: translateY(+50em);
+    animation: changeOpacity 0.7s;
+    z-index: 1;
+}
+
+.btn-container {
+    margin-top: 2em;
+}
+
+.btn-orange {
+    background-color: var(--orange) !important;
+}
+.btn-gray {
+    background-color: var(--gray) !important;
+}
+
+.hall-info {
+    height: 942px;
+    width: 842px;
+}
+
+.film-info__seats {
+    margin-top: 2em;
+}
+.film-info__seats-title {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.selected-seat:last-child {
+    margin-bottom: 1em;
+}
+
+.film-info__seat {
+    display: flex;
+    flex-direction: column;
+}
+
+.film-info__seat::-webkit-scrollbar {
+    width: 0;
+}
+
+.film-info__seat_js {
+    display: none;
+}
+
+.selected-seat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.selected-seat div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.selected-seat__number {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.selected-seat__disc {
+    font-size: 1em;
+    color: var(--black);
+}
+
+.film-info__selected-seats {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: 0.1em solid var(--white);
+    border-top: 0.1em solid var(--white);
+}
+
+.film-info__final-cost {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.film-info__cost-title {
+    margin-right: 2em;
+}
+
+.film-info__cost {
+    font-weight: 700;
+}
+
+.film-info__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--orange);
+    height: 3em;
+    width: 5em;
+    border-radius: 2em;
+    color: var(--white);
+    align-self: flex-end;
+}
+
+.hall_seats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2em;
+    transition: 0.1s;
+    transform: scaleX(1) scaleY(1);
+}
+
+@media screen and (max-width: 600px) {
+    .hall_seats:hover {
+        background-color: var(--gray);
+        transition: 0.1s;
+        transform: scaleX(1.15) scaleY(1.15);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hall_seats:hover {
+        background-color: var(--gray);
+        transition: 0.1s;
+        transform: scaleX(1.1) scaleY(1.2);
+    }
+}
+
+.seat {
+    height: 1.5em;
+    width: 1em;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+.seat:not(:last-child) {
+    margin-right: 0.5em;
+}
+
+.hall-info__saturation-line {
+    height: 0.1em;
+    background: var(--white);
+    margin-bottom: 2em;
+}
+
+.hall-info__legend {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hall-info__legend-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hall-info__legend-color {
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+
+.hall-info__legend-description {
+    font-size: 1em;
+}
+
+.hall-info__legend-color_free {
+    background: var(--orange);
+}
+
+.hall-info__legend-color_taken {
+    background: var(--white);
+}
+
+.hall-info__legend-color_selected {
+    background: var(--gray);
+    outline: 2px solid var(--orange);
+}
+
+/* animations */
+
+@keyframes changeOpacity {
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes changeOpacityReverse {
+    0% {
+        opacity: 100;
+    }
+    40% {
+        opacity: 0;
+    }
+}

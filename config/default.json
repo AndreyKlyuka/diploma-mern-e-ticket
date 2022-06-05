@@ -1,0 +1,6 @@
+{
+    "port": 5000,
+    "jwtSecret": "andrej diploma",
+    "mongoUri": "mongodb+srv://Andrej:Andrej_diploma@cluster0.t7kwq.mongodb.net/app?retryWrites=true&w=majority",
+    "baseUrl": "http://locathost:5000"
+}
