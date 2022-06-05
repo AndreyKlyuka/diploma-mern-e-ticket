@@ -49,7 +49,7 @@ router.post(
     }
 )
 
-//api/auth/login
+//api/auth/logiN
 router.post(
     '/login',
     [
