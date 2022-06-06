@@ -1,7 +1,7 @@
 const express = require('express')
 const config = require('config')
 const mongoose = require('mongoose')
-cpnst path = require('path')
+const path = require('path')
 
 const app = express()
 
@@ -10,7 +10,7 @@ app.use(express.json({ extendes: true }))
 app.use('/api/auth', require('./routes/auth.routes'))
 app.use('/api/event', require('./routes/event.routes'))
 
-if(process.env.NODE_ENV === 'production'){
+if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static(path.join(__dirname, 'client', 'build')))
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
